@@ -35,15 +35,33 @@ let btnSubmit= document.querySelector('.btn-result')
 // on écoute les évenemnts de type click sur les inputs de type checkbox
 let allInputs = document.querySelectorAll("input[type='checkbox']")
 allInputs.forEach(input => {
+    
     input.addEventListener('click', e => {
         value = e.target.value
         indexUser= options.findIndex((option) =>  option.name == value )
         user = options[indexUser]
+        resetBorder(input.getAttribute("id"))
     })
     
-});
+})
 
+function resetBorder (input ) {
+    allInputs.forEach(element => {
+        console.log(input)
+        let divParent = element.parentNode 
+        let label = divParent.firstChild
+        let img = label.firstChild
 
+        img.style= "border: 1px solid #dee2e6;"
+
+        if (input == element.getAttribute("id"))
+        {
+            console.log("border change")
+            img.style= "border: 10px solid #dee2e6;"
+        }
+    })
+
+}
 
 // on génère le choix de l'ordinateur
 function getComputerChoice()
