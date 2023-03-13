@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chifoumi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row my-5">
+      <h1>Pierre, Feuille, Ciseaux</h1>
+    </div>
+    <div class="row justify-content-center">
+      <div class="btn col-3">
+        <h2 class="text-center score-badge"></h2>
+      </div>
+    </div>
+    <form class="chifoumi-form">
+      <div class="row my-4">
+        <div class="card text-center">
+          <div class="card-header">
+            <h4>Ordinateur</h4>
+          </div>
+          <div class="card-body">
+            <img class="img-thumbnail computer-img" style="width: 250px" src="./static/img/question-mark.jpg" alt="">
+          </div>
+          <div class="card-footer text-muted">
+            <h3 class="text-warning"> Score :
+              <span class="score-computer"></span>
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div class="row my-4">
+        <div class="card text-center">
+          <div class="card-header">
+            <h4>Vous</h4>
+          </div>
+          <div class="card-body row">
+            <div class="col-4">
+           
+              <label for="rock"><img style="cursor: pointer" class="img-thumbnail" src="./static/img/pierre.jpg" alt="">
+                <img class="img-thumbnail" src="./static/img/" alt="">
+              </label>
+              <input id="rock" value="rock" name="rock" style="display: none" type="checkbox"/> 
+            </div>
+            <div class="col-4">
+              <label for="paper"><img style="cursor: pointer" class="img-thumbnail" src="./static/img/papier.jpg" alt="">
+                <img class="img-thumbnail" src="./static/img/" alt="">
+              </label>
+              <input id="paper" value="paper" name="paper" style="display: none" type="checkbox"/>
+            </div>
+            <div class="col-4">
+                <label for="scissors"><img style="cursor: pointer" class="img-thumbnail" src="./static/img/ciseaux.jpg" alt=""></label>
+                <input id="scissors" value="scissors" style="display: none" type="checkbox" name="scissors"/>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <h3 class="text-info">Score :
+              <span class="score-player"></span>
+            </h3>
+            
+          </div>
+        </div>
+      </div>
+      <div class="row my-5 justify-content-center">
+        <div class="col-8 col-sm-6 col-md-3 col-lg-2 p-2 btn btn-dark btn-result" ><h4>Résultat...</h4></div>
+      </div>
+      </form>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="./static/scripts/script.js"></script>
+</body>
+</html>
